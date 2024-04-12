@@ -15,7 +15,7 @@ function Workouts({ workout }) {
   const handleClick = () => {
     if (!user) return;
     axios
-      .delete(`http://localhost:5000/workouts/${workout._id}`, {
+      .delete(`workouts/${workout._id}`, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

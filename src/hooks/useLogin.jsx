@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
-import axios from "axios";
+import axios from "../../api/axios";
 
 export const useLogin = () => {
   const [error, setError] = useState(null);
@@ -11,7 +11,7 @@ export const useLogin = () => {
     setIsLoading(true);
     setError(null);
     axios
-      .post("http://localhost:5000/users/login", { email, password })
+      .post("users/login", { email, password })
       .then((response) => {
         // Save the user to local storage
         localStorage.setItem("user", JSON.stringify(response.data));

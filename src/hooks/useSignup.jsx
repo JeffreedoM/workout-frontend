@@ -11,7 +11,7 @@ export const useSignup = () => {
     setIsLoading(true);
     setError(null);
     axios
-      .post("http://localhost:5000/users/signup", { email, password })
+      .post("users/signup", { email, password })
       .then((response) => {
         // Save the user to local storage
         localStorage.setItem("user", JSON.stringify(response.data));
