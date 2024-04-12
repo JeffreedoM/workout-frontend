@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
-import axios from "axios";
+import axios from "../../api/axios";
 
 export const useSignup = () => {
   const [error, setError] = useState(null);

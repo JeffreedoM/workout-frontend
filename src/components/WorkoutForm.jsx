@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../api/axios";
 import { useState } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 import { useAuthContext } from "../hooks/useAuthContext";
