@@ -24,7 +24,7 @@ function WorkoutForm() {
     }
     axios
       .post(
-        "workouts",
+        "workouts/",
         { title, load, reps },
         {
           headers: {
