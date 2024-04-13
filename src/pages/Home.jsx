@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../api/axios";
 import { useEffect } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 import { useAuthContext } from "../hooks/useAuthContext";
@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     if (user) {
       axios
-        .get("http://localhost:5000/workouts/", {
+        .get("workouts", {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },
